@@ -263,9 +263,8 @@
                 },
             };
             for (let i = 0; i < 6; ++i) {
-                TABS.all.items = []
-                    .concat(TABS.all.items)
-                    .concat(TABS.all.items);
+                const arr = TABS.all.items;
+                TABS.all.items = arr.concat(arr);
             }
             const TABS_KEYS = Object.keys(TABS);
 
