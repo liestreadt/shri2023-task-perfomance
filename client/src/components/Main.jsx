@@ -2,8 +2,6 @@ import React from "react";
 
 import { TABS, TABS_KEYS } from "../helpers/dataBase";
 
-console.log(TABS.all.items);
-
 import Event from "./Event";
 
 export default function Main() {
@@ -32,8 +30,6 @@ export default function Main() {
 
     React.useEffect(() => {
         const sumWidth = sizes.reduce((acc, item) => acc + item.width, 0);
-        // const sumHeight = sizes.reduce((acc, item) => acc + item.height, 0);
-
         const newHasRightScroll = sumWidth > ref.current.offsetWidth;
         if (newHasRightScroll !== hasRightScroll) {
             setHasRightScroll(newHasRightScroll);
