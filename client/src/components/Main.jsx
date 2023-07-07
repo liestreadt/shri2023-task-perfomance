@@ -23,9 +23,11 @@ export default function Main() {
         setActiveTab(event.target.value);
     };
 
-    let sizes = [];
+    // const sizes = React.useMemo(() => [], []);
+    const sizes = [];
+
     const onSize = (size) => {
-        sizes = [...sizes, size];
+        sizes.push(size);
     };
 
     React.useEffect(() => {
